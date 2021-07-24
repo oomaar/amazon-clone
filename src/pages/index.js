@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { Header } from "../Components/Header/Header";
 
 export default function Home() {
   return (
@@ -8,7 +9,7 @@ export default function Home() {
         <title>E-commerce Web-Site</title>
       </Head>
 
-      <h1 className="text-5xl">Let's build an E-commerce website!</h1>
+      <Header />
     </div>
   );
 }
