@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Header, Banner } from "../Components";
+import { Header, Banner, ProductFeed } from "../Components";
 
 export default function Home() {
   return (
@@ -13,8 +13,7 @@ export default function Home() {
 
       <main className="max-w-screen-2xl mx-auto">
         <Banner />
-
-        {/* Product Feed */}
+        <ProductFeed />
       </main>
     </div>
   );
