@@ -9,7 +9,7 @@ export const Product = ({
     price,
     description,
     category,
-    image
+    image,
 }) => {
     const MAX_RATING = 5;
     const MIN_RATING = 1;
@@ -17,7 +17,7 @@ export const Product = ({
     const [hasPrime] = useState(Math.random() < 0.5);
 
     return (
-        <div className="relative flex flex-col m-5 bg-white z-30 p-10">
+        <div className="relative flex flex-col m-5 p-10 z-30 bg-white">
             <p className="absolute top-2 right-2 text-xs italic text-gray-400">
                 {category}
             </p>
@@ -31,7 +31,7 @@ export const Product = ({
 
             <div className="flex">
                 {Array(rating).fill().map((_, i) => (
-                    <StarIcon className="h-5 text-yellow-500" />
+                    <StarIcon key={i} className="h-5 text-yellow-500" />
                 ))}
             </div>
 
