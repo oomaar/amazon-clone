@@ -14,8 +14,8 @@ export default function Home({ products }) {
       <main className="max-w-screen-2xl mx-auto">
         <Banner />
         <ProductFeed products={products} />
-        <Footer />
       </main>
+      <Footer />
     </div>
   );
 };
