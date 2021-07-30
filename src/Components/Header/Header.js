@@ -12,7 +12,7 @@ export const Header = () => {
 
     return (
         <div>
-            <Sidebar />
+            {sidebarShow && <Sidebar setSidebarShow={setSidebarShow} />}
             <header className="fixed top-0 right-0 left-0 z-40">
                 {/* Top Nav */}
                 <div className="flex items-center bg-amazon_blue p-1 flex-grow py-2">
@@ -61,7 +61,10 @@ export const Header = () => {
                 </div>
 
                 {/* Bottom Nav */}
-                <div className="flex items-center bg-amazon_blue-light text-white text-sm space-x-3 p-2 pl-6">
+                <div
+                    className="flex items-center bg-amazon_blue-light text-white text-sm space-x-3 p-2 pl-6"
+                    onClick={() => setSidebarShow(true)}
+                >
                     <p className="link flex items-center">
                         <MenuIcon className="h-6 mr-1" />
                         All

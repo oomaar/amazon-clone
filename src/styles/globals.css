@@ -12,4 +12,12 @@
         border border-yellow-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-yellow-500 
         active:from-yellow-500;
   }
+
+  .sidebarContainer {
+    @apply p-4 border-b-2;
+  }
+
+  .sidebarBox {
+    @apply cursor-pointer flex justify-between hover:bg-gray-200 py-4 px-1 rounded-md;
+  }
 }
