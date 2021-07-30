@@ -1,7 +1,10 @@
 import { UserCircleIcon, XIcon, ChevronRightIcon, ChevronDownIcon } from "@heroicons/react/solid";
 import { GlobeAltIcon } from "@heroicons/react/outline";
+import { useSession } from "next-auth/client";
 
 export const Sidebar = ({ setSidebarShow }) => {
+    const [session] = useSession();
+
     return (
         <div className="fixed h-full z-50 w-full top-0 bg-gray-900 bg-opacity-50
             transition duration-200 ease-in">
@@ -12,7 +15,9 @@ export const Sidebar = ({ setSidebarShow }) => {
                         onClick={() => setSidebarShow(false)}
                     />
                     <UserCircleIcon className="h-6 text-white px-4" />
-                    <p className="text-white font-bold">Hello, Sign In</p>
+                    <p className="text-white font-bold">
+                        {session ? `Hello, ${session.user.name}` : "Hello, Sign In"}
+                    </p>
                 </div>
 
                 <div className="sidebarContainer">

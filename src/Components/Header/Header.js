@@ -43,7 +43,7 @@ export const Header = () => {
                     <div className="text-white flex items-center text-xs space-x-6 px-6 whitespace-nowrap">
                         <div onClick={!session ? signIn : signOut} className="link">
                             <p>
-                                {session ? `Hello, ${session.user.name}` : "Sign In"}
+                                {session ? `Hello, ${session.user.name}` : "Hello, Sign In"}
                             </p>
                             <p className="font-extrabold md:text-sm">Account & Lists</p>
                         </div>
