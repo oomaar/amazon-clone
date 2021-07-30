@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Sidebar } from "..";
 import Image from "next/image";
+import { signIn, signOut, useSession } from "next-auth/client";
 import {
     SearchIcon,
     ShoppingCartIcon,
@@ -9,6 +10,7 @@ import {
 
 export const Header = () => {
     const [sidebarShow, setSidebarShow] = useState(false);
+    const [session] = useSession();
 
     return (
         <div>
@@ -39,8 +41,10 @@ export const Header = () => {
 
                     {/* Right */}
                     <div className="text-white flex items-center text-xs space-x-6 px-6 whitespace-nowrap">
-                        <div className="link">
-                            <p>Hello Name</p>
+                        <div onClick={!session ? signIn : signOut} className="link">
+                            <p>
+                                {session ? `Hello, ${session.user.name}` : "Sign In"}
+                            </p>
                             <p className="font-extrabold md:text-sm">Account & Lists</p>
                         </div>
 
