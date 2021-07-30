@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Sidebar } from "..";
 import Image from "next/image";
 import { signIn, signOut, useSession } from "next-auth/client";
+import { useRouter } from "next/router";
 import {
     SearchIcon,
     ShoppingCartIcon,
@@ -11,6 +12,7 @@ import {
 export const Header = () => {
     const [sidebarShow, setSidebarShow] = useState(false);
     const [session] = useSession();
+    const router = useRouter();
 
     return (
         <div>
@@ -26,6 +28,7 @@ export const Header = () => {
                             height={40}
                             objectFit="contain"
                             className="cursor-pointer"
+                            onClick={() => router.push('/')}
                         />
                     </div>
 
@@ -53,7 +56,10 @@ export const Header = () => {
                             <p className="font-extrabold md:text-sm">& Orders</p>
                         </div>
 
-                        <div className="relative flex items-center link">
+                        <div
+                            className="relative flex items-center link"
+                            onClick={() => router.push('/checkout')}
+                        >
                             <span className="absolute top-0 right-0 md:right-10 h-4 w-4 bg-yellow-400
                             text-center rounded-full text-black font-bold">
                                 0
