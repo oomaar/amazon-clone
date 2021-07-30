@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Header, Banner, ProductFeed, Footer } from "../Components";
+import { Banner, ProductFeed } from "../Components";
 
 export default function Home({ products }) {
   return (
