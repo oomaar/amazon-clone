@@ -4,3 +4,4 @@ export { ProductFeed } from "./ProductFeed/ProductFeed";
 export { Product } from "./Product/Product";
 export { Footer } from "./Footer/Footer";
 export { Sidebar } from "./Sidebar/Sidebar";
+export { CheckoutProduct } from "./CheckoutProduct/CheckoutProduct";
