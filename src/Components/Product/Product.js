@@ -17,16 +17,19 @@ export const Product = ({
     const [hasPrime] = useState(Math.random() < 0.5);
 
     return (
-        <div className="relative flex flex-col m-5 p-10 z-30 bg-white">
+        <div className="relative flex flex-col m-5 p-10 z-30 bg-white rounded-lg shadow-lg">
             <p className="absolute top-2 right-2 text-xs italic text-gray-400">
                 {category}
             </p>
-            <Image
-                src={image}
-                width={200}
-                height={200}
-                objectFit="contain"
-            />
+            <div className="flex justify-center shadow-md p-3 transform hover:scale-105 cursor-pointer
+                transition duration-200 rounded-md">
+                <Image
+                    src={image}
+                    width={200}
+                    height={200}
+                    objectFit="contain"
+                />
+            </div>
             <h4 className="my-3">{title}</h4>
 
             <div className="flex">
