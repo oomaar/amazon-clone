@@ -4,7 +4,7 @@ export const Footer = () => {
     return (
         <footer>
             <button className="w-full bg-gray-700 text-gray-300 py-3
-                hover:bg-gray-600 transition duration-200">
+                hover:bg-gray-600 transition duration-200 border rounded-xl">
                 <a href="#">Back To Top</a>
             </button>
             {/* Top Footer */}

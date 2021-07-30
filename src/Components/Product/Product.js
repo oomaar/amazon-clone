@@ -17,12 +17,12 @@ export const Product = ({
     const [hasPrime] = useState(Math.random() < 0.5);
 
     return (
-        <div className="relative flex flex-col m-5 p-10 z-30 bg-white rounded-lg shadow-lg">
+        <div className="relative flex flex-col m-5 p-10 z-30 bg-gray-800 rounded-lg shadow-lg">
             <p className="absolute top-2 right-2 text-xs italic text-gray-400">
                 {category}
             </p>
             <div className="flex justify-center shadow-md p-3 transform hover:scale-105 cursor-pointer
-                transition duration-200 rounded-md">
+                transition duration-200 rounded-md bg-white">
                 <Image
                     src={image}
                     width={200}
@@ -30,7 +30,7 @@ export const Product = ({
                     objectFit="contain"
                 />
             </div>
-            <h4 className="my-3">{title}</h4>
+            <h4 className="my-3 text-gray-100">{title}</h4>
 
             <div className="flex">
                 {Array(rating).fill().map((_, i) => (
@@ -38,14 +38,14 @@ export const Product = ({
                 ))}
             </div>
 
-            <p className="text-xs my-2 line-clamp-2">{description}</p>
+            <p className="text-xs my-2 line-clamp-2 text-gray-100">{description}</p>
 
-            <div className="mb-5">
+            <div className="mb-5 text-gray-100">
                 <Currency quantity={price} currency='EGP' />
             </div>
 
             {hasPrime && (
-                <div className="flex items-center space-x-2 -mt-5">
+                <div className="flex items-center space-x-2 my-5">
                     <img className="w-12" src="https://links.papareact.com/fdw" alt="" />
                     <p className="text-xs text-gray-500">FREE Next-day Delivery</p>
                 </div>

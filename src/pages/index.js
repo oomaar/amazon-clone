@@ -3,7 +3,7 @@ import { Header, Banner, ProductFeed, Footer } from "../Components";
 
 export default function Home({ products }) {
   return (
-    <div className="bg-gray-100">
+    <div className="bg-gray-700">
       <Head>
         <link rel="icon" href="/favicon.png" />
         <title>E-commerce Web-Site</title>
