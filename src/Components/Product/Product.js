@@ -28,6 +28,8 @@ export const Product = ({
             description,
             category,
             image,
+            rating,
+            hasPrime
         };
 
         dispatsh(addToBasket(product));
